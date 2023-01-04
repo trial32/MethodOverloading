@@ -12,6 +12,9 @@ Console.WriteLine(result);
 int ifade=999;
 instance.EkranaYazdir(ifade);
 
+int toplamaSonucu= instance.Topla(1,2,3,5);
+instance.EkranaYazdir(toplamaSonucu);
+
 class Methodlar{
 
     public void Topla (int deger1, int deger2, out int toplam){
@@ -29,6 +32,10 @@ class Methodlar{
         Console.WriteLine(veri);
     }
 
+    public int Topla (params int[] sayilar){
+
+        return sayilar.Sum();
+    }
 
 }
 
